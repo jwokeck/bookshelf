@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Library</title>
+		<link rel="stylesheet" href="style.css" />
+		<script
+			src="https://kit.fontawesome.com/f047349b20.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+	</head>
+	<body>
+		<h1>Bookshelf</h1>
+		<div class="bookcase">
+			<ul class="shelf"></ul>
+
+			<ul class="shelf"></ul>
+		</div>
+
+		<h1>Inventory</h1>
+		<div class="bookcase">
+			<div class="shelf" id="inventory"></div>
+		</div>
+
+		<div class="actions">
+			<div class="form">
+				<h2>New Book</h2>
+				<form>
+					<!-- <label for="input">Book Title</label> -->
+					<input
+						type="text"
+						class="input"
+						id="input"
+						placeholder="Book Title"
+					/>
+					<input
+						type="button"
+						class="button"
+						value="Add Book"
+						onclick="addBook()"
+					/>
+				</form>
+			</div>
+			<div class="trash" id="trash">
+				<i class="far fa-trash-alt fa-5x"></i>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+		<script src="readfile.js"></script>
+	</body>
+</html>

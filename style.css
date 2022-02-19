@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro&family=Chewy&family=Cinzel+Decorative&family=Fredericka+the+Great&family=Limelight&family=Megrim&family=Skranji&family=Special+Elite&display=swap');
+
+html {
+	background: url(wickedbackground.svg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+body {
+	font-family: 'Andada Pro', serif;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 90vw;
+}
+.bookcase {
+	display: flex;
+	flex-direction: column;
+	min-width: 100px;
+	margin: 0;
+	padding: 0;
+}
+.shelf {
+	flex-direction: row;
+	align-items: flex-end;
+	display: flex;
+	min-height: 150px;
+	background-image: url('wood.png');
+	background-repeat: repeat;
+	background-size: cover;
+	list-style-type: none;
+	margin: 0;
+	padding: 10px 5px 0px 5px;
+	border: 3px solid tan;
+}
+li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.book {
+	cursor: pointer;
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	overflow: hidden;
+	text-align: center;
+	border-radius: 2px;
+	border: 5px solid rgba(0, 0, 0, 0);
+	position: relative;
+	margin: 0px 1px;
+	padding: 15px 5px 5px 5px;
+	border-width: 0px 4px;
+	max-height: 200px;
+
+	-webkit-box-shadow: 0px 7px 17px 5px rgba(0, 0, 0, 0.38);
+	box-shadow: 0px 7px 17px 5px rgba(0, 0, 0, 0.38);
+}
+.book:before {
+	content: ' ';
+	top: 0;
+	width: 100%;
+	position: absolute;
+	border-top: 10px solid white;
+}
+
+.controls {
+	visibility: hidden;
+}
+
+#inventory {
+	justify-content: center;
+	width: auto;
+}
+#inventory .book {
+	margin: 10px;
+}
+
+.actions {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: row;
+}
+.trash {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	font-size: 20px;
+	color: gray;
+}
