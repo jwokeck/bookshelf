@@ -1,4 +1,4 @@
-let book;
+// let book;
 let books = document.querySelectorAll('.book');
 let bookFile = [
 	'Lord of the Flies',
@@ -6,7 +6,7 @@ let bookFile = [
 	'The Book Thief',
 	'To Kill a Mockingbird',
 	'1984',
-	"Alice/'s Adventures in Wonderland",
+	"Alice's Adventures in Wonderland",
 	'Les Misérables',
 	'The Odyssey',
 	'The Grapes of Wrath',
@@ -104,5 +104,28 @@ $(function () {
 				ui.draggable.remove();
 			}
 		},
+	});
+});
+
+const deleteShelf = document.querySelector('.fa-square-minus');
+deleteShelf.addEventListener('click', () => {
+	let shelves = document.querySelectorAll('#bookshelf .shelf');
+	let num = shelves.length;
+	if (confirm('Do you want to remove this shelf and all of its books?')) {
+		document.querySelector('#bookshelf').removeChild(shelves[num - 1]);
+	}
+});
+
+const addShelf = document.querySelector('.fa-square-plus');
+addShelf.addEventListener('click', () => {
+	let shelf = document.createElement('ul');
+	shelf.className = 'shelf';
+	document.querySelector('#bookshelf').appendChild(shelf);
+	$(function () {
+		$('.shelf')
+			.sortable({
+				connectWith: '.shelf',
+			})
+			.disableSelection();
 	});
 });

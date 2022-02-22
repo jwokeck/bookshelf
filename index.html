@@ -3,25 +3,31 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Library</title>
+		<title>My Bookshelf</title>
 		<link rel="stylesheet" href="style.css" />
 		<script
 			src="https://kit.fontawesome.com/f047349b20.js"
 			crossorigin="anonymous"
 		></script>
+		<script src="print.js" type="module"></script>
 		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 		<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
 	</head>
 	<body>
+		<div class="print" id="print">Print</div>
 		<h1>Bookshelf</h1>
-		<div class="bookcase">
-			<ul class="shelf"></ul>
-
+		<div class="bookshelf" id="bookshelf">
 			<ul class="shelf"></ul>
 		</div>
 
+		<div class="shelf-controls">
+			<i class="fa-regular fa-square-minus"></i
+			><i class="fa-solid fa-square-plus"></i>
+		</div>
+
 		<h1>Inventory</h1>
-		<div class="bookcase">
+		<div class="bookshelf">
 			<div class="shelf" id="inventory"></div>
 		</div>
 

@@ -15,7 +15,8 @@ body {
 	justify-content: flex-start;
 	width: 90vw;
 }
-.bookcase {
+.inventory,
+.bookshelf {
 	display: flex;
 	flex-direction: column;
 	min-width: 100px;
@@ -27,13 +28,14 @@ body {
 	align-items: flex-end;
 	display: flex;
 	min-height: 150px;
+	width: auto;
 	background-image: url('wood.png');
 	background-repeat: repeat;
 	background-size: cover;
 	list-style-type: none;
 	margin: 0;
 	padding: 10px 5px 0px 5px;
-	border: 3px solid tan;
+	border: 4px solid tan;
 }
 li {
 	display: flex;
@@ -84,8 +86,11 @@ li {
 }
 .trash {
 	position: fixed;
-	top: 10px;
+	bottom: 10px;
 	right: 10px;
 	font-size: 20px;
 	color: gray;
+}
+.shelf-controls i {
+	padding: 5px;
 }
