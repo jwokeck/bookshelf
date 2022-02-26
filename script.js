@@ -129,3 +129,13 @@ addShelf.addEventListener('click', () => {
 			.disableSelection();
 	});
 });
+
+function openNav() {
+	document.getElementById('menu').style.width = '450px';
+	document.getElementById('main').style.marginLeft = '450px';
+}
+
+function closeNav() {
+	document.getElementById('menu').style.width = '0';
+	document.getElementById('main').style.marginLeft = '0';
+}
